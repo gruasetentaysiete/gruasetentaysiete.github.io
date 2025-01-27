@@ -1,0 +1,150 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import H1 from "../components/H1.astro";
+import Button from "../components/Button.astro";
+import Form from "../components/Form.astro";
+import FeatureSection from "../components/FeatureSection.astro";
+
+import { FaWhatsapp } from "react-icons/fa";
+// import the Image component from Astro and the main landing page image
+import { Image } from "astro:assets";
+import mainLandingPage from "../../public/assets/mainLandingPage.webp";
+
+// Feature Section Image Imports
+import featureSectionOne from "../../public/assets/featureSectionOne.webp";
+import featureSectionTwo from "../../public/assets/featureSectionTwo.webp";
+import featureSectionThree from "../../public/assets/featureSectionThree.webp";
+
+// farewell image
+import farewell from "../../public/assets/farewell.webp";
+---
+
+<Layout title="Gruas 77">
+  <Main>
+    <!-- H1 : Es el titulo de la pagina, cambialo para actualizarlo -->
+    <H1 text="Gruas 77" />
+
+    <!-- Subtitulo de la pagina -->
+    <p class="text-white text-center text-2xl p-3">Perfil de la Empresa</p>
+
+    <!-- Imagen de bienvenida -->
+    <div class="flex justify-center mt-10 mx-2 sm:mx-11">
+      <Image
+        class="w-full sm:w-4/5 md:w-7/12 lg:w-7/12 xl:w-7/12 h-auto object-contain sm:mx-11 aspect-w-4 aspect-h-3 rounded-lg"
+        src={mainLandingPage}
+        alt="Gruas 77 Landing Page Image"
+      />
+    </div>
+
+    <!-- Boton de contacto -->
+    <div class="flex justify-center mt-10">
+      <!-- Cambiar texto del boton aqui abajo -->
+      <Button
+        href="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
+        text="Contactanos!"
+        icon={FaWhatsapp}
+      />
+    </div>
+
+    <div id="registrationForm" class="hidden">
+      <Form />
+    </div>
+
+    <!-- Seccion de caracteristicas -->
+    <!-- Features section -->
+    <FeatureSection
+      heading="¿Qué ofrecemos?"
+      imageSrc={featureSectionOne}
+      imageDescription="Gruas 77 Main Landing Page Image"
+      htmlContent={`
+				<p>
+          Ofrecemos servicios de grúas de plataforma en la zona metropolitana de Guadalajara 
+          y a nivel nacional, especializados en el transporte seguro y eficiente de vehículos 
+          y cargas especiales como maquinaria. Nuestro equipo capacitado está disponible 24/7
+           para atender emergencias.
+				</p>
+			`}
+      buttonText="Cotizar inmediatamente"
+      buttonLink="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
+      buttonIcon={FaWhatsapp}
+    />
+
+    <FeatureSection
+      heading="Nuestros servicios!"
+      imageSrc={featureSectionTwo}
+      imageDescription="Gruas 77 Main Landing Page Image"
+      htmlContent={`
+				<ol class="list-decimal pl-5 pt-3 space-y-2">
+					<li>
+						Trasporte de automoviles ZMG
+					</li>
+					<li>
+						Trasporte de automoviles foraneos a toda la Republica
+					</li>
+					<li>
+            Trasporte de motocicletas
+					</li>
+          <li>
+            Trasporte de montacargas
+          </li>
+          <li>
+            Trasporte y carga de maquinaria pesada
+          </li>
+          <li>
+            Trasporte de oficinas moviles y contenedores
+          </li>
+				</ol>
+			`}
+      buttonText="Realizar cotización"
+      buttonLink="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
+      buttonIcon={FaWhatsapp}
+    />
+
+    <div>
+      <FeatureSection
+        heading="Servicios Confiables"
+        imageSrc={featureSectionThree}
+        imageDescription="Gruas 77 Main Landing Page Image"
+        htmlContent={`
+        <p>
+          Sabemos lo importante que es para empresas como la suya o clientes como
+          usted contar con un servicio confiable que garantice el transporte seguro y
+          eficiente de automóviles, maquinaria y equipo pesado.  En Grúas 77, nos
+          especializamos en:
+        </p>
+       	<ul class="list-disc pl-5 pt-3 space-y-2">
+					<li>
+						Transporte seguro y rápido 
+					</li>
+					<li>
+						Mejor precio y calidad en el servicio
+					</li>
+					<li>
+            Servicio de emergencia
+					</li>
+				</ul>
+			`}
+        buttonText="Consultar servicios"
+        buttonLink="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
+        buttonIcon={FaWhatsapp}
+      />
+    </div>
+
+    <!-- Imagen de despedida -->
+    <div
+      class="flex flex-col sm:flex-row justify-center items-center gap-8 mt-10 mx-2 sm:mx-11"
+    >
+      <Image
+        class="w-full sm:w-5/12 h-auto object-contain rounded-lg"
+        src={mainLandingPage}
+        alt="Gruas 77 Landing Page Image"
+      />
+      <Image
+        class="w-full sm:w-5/12 h-auto object-contain rounded-lg"
+        src={farewell}
+        alt="Gruas 77 Landing Page Image"
+      />
+    </div>
+  </Main></Layout
+>

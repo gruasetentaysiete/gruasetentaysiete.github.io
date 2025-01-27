@@ -1,0 +1,36 @@
+
+/* Set the fonts for this project */
+@font-face {
+    font-family: 'Next Art';
+    src: url('/fonts/Next Art/NEXT ART_Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Next Art';
+    src: url('/fonts/Next Art/NEXT ART_Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Next Art';
+    src: url('/fonts/Next Art/NEXT ART_SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Next Art';
+    src: url('/fonts/Next Art/NEXT ART_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Next Art';
+    src: url('/fonts/Next Art/NEXT ART_Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
