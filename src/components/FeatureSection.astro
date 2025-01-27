@@ -1,0 +1,53 @@
+---
+import Button from "./Button.astro";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import H2 from "./H2.astro";
+
+type Props = {
+    heading?: string;
+    imageSrc: ImageMetadata;
+    imageDescription?: string;
+    htmlContent?: string;
+    buttonText?: string;
+    buttonLink?: string;
+    buttonIcon?: any;
+};
+
+const {
+    heading = "DEFAULT HEADING",
+    imageDescription = "DEFAULT ALT IMAGE CONTENT",
+    imageSrc,
+    htmlContent = "<p>DEFAULT HTML CONTENT<p/>",
+    buttonText = "DEFAULT BUTTON TEXT",
+    buttonLink = "#",
+    buttonIcon = null,
+} = Astro.props;
+---
+
+<div class="container mx-auto my-4 sm:p-4 sm:my-7">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <!-- Image Section -->
+        <div class="flex justify-center p-3">
+            <Image
+                class="w-full sm:w-10/12 h-auto object-cover sm:p-0 rounded-lg"
+                src={imageSrc}
+                alt={imageDescription}
+            />
+        </div>
+
+        <!-- Content Section -->
+        <div class="text-center md:text-left p-6">
+            <H2 text={heading} />
+            <div class="my-6 text-lg text-white" set:html={htmlContent} />
+            <div class="mt-6 pt-4 flex justify-center">
+                <Button 
+                    text={buttonText} 
+                    href={buttonLink}
+                    icon={buttonIcon}
+                    class="scroll-trigger"
+                />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+---
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { SiX, SiSpotify } from "react-icons/si";
+
+type Props = {
+  copyrightText?: string;
+  facebookLink?: string;
+  twitterLink?: string;
+  instagramLink?: string;
+  youtubeLink?: string;
+  spotifyLink?: string;
+};
+
+const {
+  copyrightText = "© Todos los derechos reservados por Gruas 77",
+  facebookLink = "#",
+  twitterLink = "#",
+  instagramLink = "#",
+  youtubeLink = "#",
+  spotifyLink = "#",
+} = Astro.props;
+---
+
+<footer class="text-white py-6">
+  <div class="container mx-auto text-center">
+    <p class="text-lg">Contactanos! Tel: +52 33 1540 4044</p>
+    <!-- <div class="flex justify-center space-x-6 my-4">
+            <a
+                href={facebookLink}
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <FaFacebookF className="text-2xl" />
+            </a>
+            <a
+                href={twitterLink}
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <SiX className="text-2xl" />
+            </a>
+            <a
+                href={instagramLink}
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <FaInstagram className="text-2xl" />
+            </a>
+            <a
+                href={youtubeLink}
+                aria-label="YouTube"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <FaYoutube className="text-2xl" />
+            </a>
+            <a
+                href={spotifyLink}
+                aria-label="Spotify"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <SiSpotify className="text-2xl" />
+            </a>
+
+        </div> -->
+    <p class="text-sm mt-4">{copyrightText}</p>
+  </div>
+</footer>
