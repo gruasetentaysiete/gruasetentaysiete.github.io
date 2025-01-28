@@ -6,7 +6,7 @@ import Button from "../components/Button.astro";
 import Form from "../components/Form.astro";
 import FeatureSection from "../components/FeatureSection.astro";
 
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPhone } from "react-icons/fa";
 // import the Image component from Astro and the main landing page image
 import { Image } from "astro:assets";
 import mainLandingPage from "../../public/assets/mainLandingPage.webp";
@@ -17,7 +17,8 @@ import featureSectionTwo from "../../public/assets/featureSectionTwo.webp";
 import featureSectionThree from "../../public/assets/featureSectionThree.webp";
 
 // farewell image
-import farewell from "../../public/assets/farewell.webp";
+import businessOne from "../../public/assets/bussinesOne.webp";
+import businessTwo from "../../public/assets/bussinesTwo.webp";
 ---
 
 <Layout title="Gruas 77">
@@ -38,17 +39,16 @@ import farewell from "../../public/assets/farewell.webp";
     </div>
 
     <!-- Boton de contacto -->
-    <div class="flex justify-center mt-10">
+    <div class="flex justify-center mt-8">
+      <!-- Cambiar texto del boton aqui abajo -->
+      <Button href="tel:+523315404044" text="¡Llamanos!" icon={FaPhone} />
+
       <!-- Cambiar texto del boton aqui abajo -->
       <Button
         href="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
         text="Contactanos!"
         icon={FaWhatsapp}
       />
-    </div>
-
-    <div id="registrationForm" class="hidden">
-      <Form />
     </div>
 
     <!-- Seccion de caracteristicas -->
@@ -65,13 +65,22 @@ import farewell from "../../public/assets/farewell.webp";
            para atender emergencias.
 				</p>
 			`}
-      buttonText="Cotizar inmediatamente"
-      buttonLink="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
-      buttonIcon={FaWhatsapp}
     />
 
+    <div class="flex justify-center">
+      <!-- Cambiar texto del boton aqui abajo -->
+      <Button href="tel:+523315404044" text="¡Llamanos!" icon={FaPhone} />
+
+      <!-- Cambiar texto del boton aqui abajo -->
+      <Button
+        href="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
+        text="Contactanos!"
+        icon={FaWhatsapp}
+      />
+    </div>
+
     <FeatureSection
-      heading="Nuestros servicios!"
+      heading="Nuestros servicios"
       imageSrc={featureSectionTwo}
       imageDescription="Gruas 77 Main Landing Page Image"
       htmlContent={`
@@ -96,11 +105,18 @@ import farewell from "../../public/assets/farewell.webp";
           </li>
 				</ol>
 			`}
-      buttonText="Realizar cotización"
-      buttonLink="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
-      buttonIcon={FaWhatsapp}
     />
+    <div class="flex justify-center">
+      <!-- Cambiar texto del boton aqui abajo -->
+      <Button href="tel:+523315404044" text="¡Llamanos!" icon={FaPhone} />
 
+      <!-- Cambiar texto del boton aqui abajo -->
+      <Button
+        href="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
+        text="Contactanos!"
+        icon={FaWhatsapp}
+      />
+    </div>
     <div>
       <FeatureSection
         heading="Servicios Confiables"
@@ -125,10 +141,18 @@ import farewell from "../../public/assets/farewell.webp";
 					</li>
 				</ul>
 			`}
-        buttonText="Consultar servicios"
-        buttonLink="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
-        buttonIcon={FaWhatsapp}
       />
+      <div class="flex justify-center">
+        <!-- Cambiar texto del boton aqui abajo -->
+        <Button href="tel:+523315404044" text="¡Llamanos!" icon={FaPhone} />
+
+        <!-- Cambiar texto del boton aqui abajo -->
+        <Button
+          href="https://wa.me/+523315404044?text=Hola! Me gustaria realizar una cotizacion"
+          text="Contactanos!"
+          icon={FaWhatsapp}
+        />
+      </div>
     </div>
 
     <!-- Imagen de despedida -->
@@ -137,12 +161,12 @@ import farewell from "../../public/assets/farewell.webp";
     >
       <Image
         class="w-full sm:w-5/12 h-auto object-contain rounded-lg"
-        src={mainLandingPage}
+        src={businessOne}
         alt="Gruas 77 Landing Page Image"
       />
       <Image
         class="w-full sm:w-5/12 h-auto object-contain rounded-lg"
-        src={farewell}
+        src={businessTwo}
         alt="Gruas 77 Landing Page Image"
       />
     </div>
