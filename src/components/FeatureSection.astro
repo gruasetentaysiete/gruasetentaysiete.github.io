@@ -19,7 +19,7 @@ const {
     imageDescription = "DEFAULT ALT IMAGE CONTENT",
     imageSrc,
     htmlContent = "<p>DEFAULT HTML CONTENT<p/>",
-    buttonText = "DEFAULT BUTTON TEXT",
+    buttonText = false,
     buttonLink = "#",
     buttonIcon = null,
 } = Astro.props;
@@ -39,14 +39,16 @@ const {
         <!-- Content Section -->
         <div class="text-center md:text-left p-6">
             <H2 text={heading} />
-            <div class="my-6 text-lg text-white" set:html={htmlContent} />
-            <div class="mt-6 pt-4 flex justify-center">
-                <Button 
-                    text={buttonText} 
-                    href={buttonLink}
-                    icon={buttonIcon}
-                    class="scroll-trigger"
-                />
+            <div class="my-4 text-lg text-white" set:html={htmlContent} />
+            <div class="flex justify-center">
+                {buttonText && (
+                    <Button 
+                        text={buttonText} 
+                        href={buttonLink}
+                        icon={buttonIcon}
+                        class="scroll-trigger"
+                    />
+                )}
             </div>
         </div>
     </div>
