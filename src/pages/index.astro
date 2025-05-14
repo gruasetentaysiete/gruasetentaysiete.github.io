@@ -1,9 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.astro";
-import H1 from "../components/H1.astro";
+import H2 from "../components/H2.astro";
 import Button from "../components/Button.astro";
-import Form from "../components/Form.astro";
 import FeatureSection from "../components/FeatureSection.astro";
 
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
@@ -32,8 +31,12 @@ import businessTwo from "../../public/assets/bussinesTwo.webp";
       />
     </div>
 
+    <div class="flex justify-center text-white">
+      <p><b>Periférico y Mariano Otero, Zapopan, Jalisco, México</b></p>
+    </div>
+
     <!-- Imagen de bienvenida -->
-    <div class="flex justify-center mt-10 mx-2 sm:mx-11">
+    <div class="flex justify-center mt-7 mx-2 sm:mx-11">
       <Image
         class="w-full sm:w-4/5 md:w-7/12 lg:w-7/12 xl:w-7/12 h-auto object-contain sm:mx-11 aspect-w-4 aspect-h-3 rounded-lg"
         src={mainLandingPage}
@@ -100,14 +103,8 @@ import businessTwo from "../../public/assets/bussinesTwo.webp";
 						Traslado de automoviles ZMG
 					</li>
 					<li>
-						Traslado de automoviles foraneos a toda la Republica
-					</li>
-					<li>
             Traslado de motocicletas
 					</li>
-          <li>
-            Traslado de montacargas
-          </li>
           <li>
             Traslado y carga de maquinaria pesada
           </li>
@@ -142,7 +139,7 @@ import businessTwo from "../../public/assets/bussinesTwo.webp";
         </p>
        	<ul class="list-disc pl-5 pt-3 space-y-2">
 					<li>
-						traslado seguro y rápido 
+						Traslado seguro y rápido 
 					</li>
 					<li>
 						Mejor precio y calidad en el servicio
@@ -166,6 +163,10 @@ import businessTwo from "../../public/assets/bussinesTwo.webp";
       </div>
     </div>
 
+    <div class="flex justify-center mt-4">
+      <H2 text="Periférico y Mariano Otero, Zapopan, Jalisco, México" />
+    </div>
+
     <!-- Imagen de despedida -->
     <div
       class="flex flex-col sm:flex-row justify-center items-center gap-8 mt-10 mx-2 sm:mx-11"
@@ -181,6 +182,5 @@ import businessTwo from "../../public/assets/bussinesTwo.webp";
         alt="Gruas 77 Landing Page Image"
       />
     </div>
-    
   </Main></Layout
 >
